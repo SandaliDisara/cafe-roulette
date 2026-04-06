@@ -1,0 +1,73 @@
+/* ── WRAPPER ─────────────────────────────────────────── */
+.receiptWrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  filter: drop-shadow(0 12px 40px rgba(0, 0, 0, 0.35));
+}
+
+/* ── CARD ────────────────────────────────────────────── */
+.receipt {
+  position: relative;
+  background-color: #f0ebe0; /* fallback if texture hasn't loaded */
+  background-size: cover;
+  background-position: center;
+  min-height: clamp(360px, 50.2vh, 439px); /* Figma: 439px on 874px frame */
+  padding: 0 24px 36px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── ICON BADGE ──────────────────────────────────────── */
+/* Figma: 100px circle, #3C613F, centred on top edge of card */
+.iconBadge {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: #3c613f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -50px; /* half of height to straddle the top edge */
+  margin-bottom: 24px;
+  flex-shrink: 0;
+  position: relative;
+  z-index: 2;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.22);
+}
+
+/* Figma: 44px × 44px icon */
+.icon {
+  width: 44px;
+  height: 44px;
+}
+
+/* ── CARD BODY ───────────────────────────────────────── */
+.cardBody {
+  width: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── SCALLOPED BOTTOM EDGE ───────────────────────────── */
+.scallop {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  justify-content: center;
+  overflow: hidden;
+  height: 26px;
+  margin-top: -1px;
+}
+
+.scallopCircle {
+  flex-shrink: 0;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: transparent;
+  /* Shadow punches the paper colour through to create the scallop illusion */
+  box-shadow: 0 -15px 0 0 #f0ebe0;
+}

@@ -1,0 +1,69 @@
+/* ── PAGE ────────────────────────────────────────────── */
+.page {
+  position: relative;
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+/* ── BACKGROUND ──────────────────────────────────────── */
+.bg {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+}
+
+.bgMobile {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.bgDesktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .bgMobile {
+    display: none;
+  }
+  .bgDesktop {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+/* Black overlay — 24% opacity matching Figma */
+.overlay {
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.24);
+  z-index: 1;
+}
+
+/* ── LAYOUT ──────────────────────────────────────────── */
+.layout {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 340px; /* reduced from 402px — narrower card */
+  padding: 48px 0 0;
+}
+
+@media (min-width: 768px) {
+  .layout {
+    max-width: 360px;
+    padding-top: 80px;
+  }
+}

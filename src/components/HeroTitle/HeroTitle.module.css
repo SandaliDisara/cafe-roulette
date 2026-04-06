@@ -1,0 +1,32 @@
+.heroTitle {
+  align-self: center; /* was flex-start, now centered */
+  text-align: center;
+  padding-left: 0;
+  margin-bottom: 24px; /* more space between title and card */
+  margin-top: -16px; /* pulls title upward */
+  line-height: 1;
+}
+
+.line {
+  display: block;
+  line-height: 0.92;
+}
+
+/* Slightly larger — was 15.42vw/62px */
+.serif {
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(44px, 17vw, 68px);
+  color: #ffffff;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+/* Slightly larger — was 31.34vw/126px */
+.script {
+  font-family: "Pinyon Script", cursive;
+  font-size: clamp(90px, 34vw, 136px);
+  color: #ffffff;
+  line-height: 0.82;
+  display: inline-block;
+  transform: translateY(8px);
+}
