@@ -9,8 +9,11 @@ import ReceiptCard from "../../components/ReceiptCard/ReceiptCard";
 import ModeSelect from "../../components/ModeSelect/ModeSelect";
 import CitySearch from "../../components/CitySearch/CitySearch";
 
+// import LocationSearch from '../../components/LocationSearch/LocationSearch'
+
 export default function LandingPage() {
   const [mode, setMode] = useState(null); // null | 'city' | 'location'
+  const [hasResult, setHasResult] = useState(false); // fades title when result shows
 
   return (
     <div className={styles.page}>
@@ -23,11 +26,25 @@ export default function LandingPage() {
 
       {/* Content */}
       <div className={styles.layout}>
-        <HeroTitle />
+        {/* Title fades out smoothly when result is showing */}
+        <div className={hasResult ? styles.titleHidden : styles.titleVisible}>
+          <HeroTitle />
+        </div>
 
         <ReceiptCard>
           {!mode && <ModeSelect onSelect={setMode} />}
-          {mode === "city" && <CitySearch onBack={() => setMode(null)} />}
+          {mode === "city" && (
+            <CitySearch
+              onBack={() => setMode(null)}
+              onResultChange={setHasResult}
+            />
+          )}
+          {/* {mode === 'location' && (
+            <LocationSearch
+              onBack={() => setMode(null)}
+              onResultChange={setHasResult}
+            />
+          )} */}
         </ReceiptCard>
       </div>
     </div>

@@ -1,0 +1,166 @@
+.cafeResult {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 16px;
+  animation: fadeUp 0.35s ease both;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ── BACK BUTTON ─────────────────────────────────────── */
+.back {
+  background: none;
+  border: none;
+  font-family: "Inconsolata", monospace;
+  font-size: clamp(20px, 5.5vw, 24px);
+  color: #3c613f;
+  cursor: pointer;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  transition: opacity 0.15s;
+}
+
+.back:hover {
+  opacity: 0.7;
+}
+
+/* ── INNER INFO CARD ─────────────────────────────────── */
+.infoCard {
+  width: 100%;
+  background: #e8f5e0;
+  border-radius: 10px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ── PHOTO ───────────────────────────────────────────── */
+.photo {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  display: block;
+}
+
+.photoPlaceholder {
+  width: 100%;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 52px;
+  background: #d4ebc8;
+}
+
+/* ── DETAILS ─────────────────────────────────────────── */
+.details {
+  padding: 14px 14px 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.row {
+  font-family: "Inconsolata", monospace;
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: #2a2a2a;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.label {
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+.value {
+  font-weight: 700;
+  color: #2a2a2a;
+}
+
+.ratingCount {
+  font-weight: 400;
+  color: #4a4a4a;
+}
+
+/* ── LINK BUTTONS (Google + Maps) ────────────────────── */
+.linkButtons {
+  display: flex;
+  gap: 10px;
+  padding: 10px 14px 14px;
+}
+
+.linkBtn {
+  flex: 1;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  background: transparent;
+  border: 1.5px solid #3c613f;
+  border-radius: 6px;
+  font-family: "Inconsolata", monospace;
+  font-size: clamp(13px, 3.5vw, 15px);
+  color: #3c613f;
+  text-decoration: none;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+
+.linkBtn:hover {
+  background: #3c613f;
+  color: #ffffff;
+}
+
+.linkBtn:hover .linkIcon svg {
+  stroke: #ffffff;
+}
+
+.linkIcon {
+  display: flex;
+  align-items: center;
+}
+
+/* ── GENERATE AGAIN BUTTON ───────────────────────────── */
+.generateBtn {
+  width: 100%;
+  height: 56px;
+  background: #3c613f;
+  border: none;
+  border-radius: 8px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(22px, 6.97vw, 28px);
+  color: #ffffff;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s,
+    transform 0.12s;
+}
+
+.generateBtn:hover {
+  background: #2d4a3e;
+  transform: translateY(-1px);
+}
+
+.generateBtn:active {
+  transform: translateY(0);
+}

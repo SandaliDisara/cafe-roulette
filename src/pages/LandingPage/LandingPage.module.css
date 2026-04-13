@@ -58,7 +58,7 @@
   align-items: center;
   width: 100%;
   max-width: 340px; /* reduced from 402px — narrower card */
-  padding: 48px 0 0;
+  padding: 24px 0 0;
 }
 
 @media (min-width: 768px) {
@@ -66,4 +66,29 @@
     max-width: 360px;
     padding-top: 80px;
   }
+}
+
+/* ── TITLE FADE ──────────────────────────────────────── */
+.titleVisible {
+  width: 100%;
+  opacity: 1;
+  max-height: 400px;
+  padding-top: 60px; /* gives ascenders room to breathe */
+  transition:
+    opacity 0.4s ease,
+    max-height 0.4s ease;
+  overflow: hidden;
+}
+
+.titleHidden {
+  width: 100%;
+  opacity: 0;
+  max-height: 0;
+  padding-top: 0;
+  transition:
+    opacity 0.4s ease,
+    max-height 0.4s ease,
+    padding-top 0.4s ease;
+  overflow: hidden;
+  pointer-events: none;
 }
