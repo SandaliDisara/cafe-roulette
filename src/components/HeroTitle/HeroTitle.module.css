@@ -2,8 +2,8 @@
   align-self: center; /* was flex-start, now centered */
   text-align: center;
   padding-left: 0;
-  margin-bottom: 24px; /* more space between title and card */
-  margin-top: -16px; /* pulls title upward */
+  margin-bottom: 50px; /* more space between title and card */
+  margin-top: -50px; /* pulls title upward */
   line-height: 1;
 }
 
