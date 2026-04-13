@@ -70,8 +70,8 @@ export default function CitySearch({ onBack, onResultChange }) {
   // ── INPUT STATE ──
   return (
     <div className={styles.citySearch}>
-      <button className={styles.back} onClick={handleBack}>
-        ‹ Back
+      <button className={styles.back} onClick={onBack}>
+        <span className={styles.backChevron}>‹</span> Back
       </button>
 
       <p className={styles.description}>

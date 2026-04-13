@@ -13,10 +13,14 @@ export default function ModeSelect({ onSelect }) {
       </p>
 
       <div className={styles.buttons}>
-        <button className={styles.btn} onClick={() => onSelect("city")}>
+        <button className={styles.btnFilled} onClick={() => onSelect("city")}>
           City Search
         </button>
-        <button className={styles.btn} onClick={() => onSelect("location")}>
+        <button
+          className={styles.btn}
+          disabled
+          onClick={() => onSelect("location")}
+        >
           Location Based
         </button>
       </div>

@@ -3,8 +3,9 @@
   flex-direction: column;
   align-items: flex-start;
   width: 100%;
-  gap: 16px;
+  gap: 12px;
   animation: fadeUp 0.35s ease both;
+  margin-top: -50px;
 }
 
 @keyframes fadeUp {
@@ -22,14 +23,16 @@
 .back {
   background: none;
   border: none;
-  font-family: "Inconsolata", monospace;
+  font-family: "Instrument Serif", serif;
   font-size: clamp(20px, 5.5vw, 24px);
   color: #3c613f;
   cursor: pointer;
   padding: 0;
+  margin-bottom: 0;
   display: flex;
   align-items: center;
-  gap: 4px;
+  gap: 2px;
+  line-height: 1;
   transition: opacity 0.15s;
 }
 
@@ -37,14 +40,22 @@
   opacity: 0.7;
 }
 
+.backChevron {
+  font-size: clamp(32px, 8vw, 38px);
+  line-height: 1;
+  display: flex;
+  align-items: center;
+}
+
 /* ── INNER INFO CARD ─────────────────────────────────── */
 .infoCard {
   width: 100%;
-  background: #e8f5e0;
+  background: #e5ffb8;
   border-radius: 10px;
   overflow: hidden;
   display: flex;
   flex-direction: column;
+  margin-top: 24px;
 }
 
 /* ── PHOTO ───────────────────────────────────────────── */
@@ -113,8 +124,8 @@
   background: transparent;
   border: 1.5px solid #3c613f;
   border-radius: 6px;
-  font-family: "Inconsolata", monospace;
-  font-size: clamp(13px, 3.5vw, 15px);
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(20px, 5.5vw, 24px);
   color: #3c613f;
   text-decoration: none;
   transition:
@@ -140,6 +151,7 @@
 .generateBtn {
   width: 100%;
   height: 56px;
+  margin-top: 24px;
   background: #3c613f;
   border: none;
   border-radius: 8px;

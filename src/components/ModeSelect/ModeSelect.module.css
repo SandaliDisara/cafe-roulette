@@ -20,7 +20,7 @@
 /* ── DESCRIPTION ─────────────────────────────────────── */
 .description {
   font-family: "Inconsolata", monospace;
-  font-size: clamp(14px, 3.98vw, 16px);
+  font-size: clamp(16px, 4.5vw, 18px);
   line-height: 1.3;
   color: #000000;
   text-align: center;
@@ -29,11 +29,11 @@
 
 .subDescription {
   font-family: "Inconsolata", monospace;
-  font-size: clamp(14px, 3.98vw, 16px);
+  font-size: clamp(16px, 4.5vw, 18px);
   line-height: 1.3;
   color: #000000;
   text-align: center;
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 
 /* ── BUTTONS ─────────────────────────────────────────── */
@@ -71,5 +71,39 @@
 }
 
 .btn:active {
+  transform: translateY(0);
+}
+
+.btn:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.btnFilled {
+  width: 100%;
+  height: 56px;
+  background: #3c613f;
+  border: 1.5px solid #3c613f;
+  border-radius: 6px;
+  font-family: "Instrument Serif", serif;
+  font-size: clamp(22px, 6.97vw, 28px);
+  color: #f0ebe0;
+  cursor: pointer;
+  letter-spacing: 0.01em;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition:
+    background 0.2s,
+    transform 0.12s;
+}
+
+.btnFilled:hover {
+  background: #2d4a3e;
+  transform: translateY(-1px);
+}
+
+.btnFilled:active {
   transform: translateY(0);
 }

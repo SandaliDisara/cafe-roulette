@@ -5,7 +5,7 @@ export default function CafeResult({ cafe, onBack, onGenerateAgain }) {
     <div className={styles.cafeResult}>
       {/* Back button */}
       <button className={styles.back} onClick={onBack}>
-        ‹ Back
+        <span className={styles.backChevron}>‹</span> Back
       </button>
 
       {/* Inner info card */}
