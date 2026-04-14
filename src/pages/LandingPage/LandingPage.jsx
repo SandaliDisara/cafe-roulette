@@ -8,8 +8,7 @@ import HeroTitle from "../../components/HeroTitle/HeroTitle";
 import ReceiptCard from "../../components/ReceiptCard/ReceiptCard";
 import ModeSelect from "../../components/ModeSelect/ModeSelect";
 import CitySearch from "../../components/CitySearch/CitySearch";
-
-// import LocationSearch from '../../components/LocationSearch/LocationSearch'
+import LocationSearch from "../../components/LocationSearch/LocationSearch";
 
 export default function LandingPage() {
   const [mode, setMode] = useState(null); // null | 'city' | 'location'
@@ -39,12 +38,12 @@ export default function LandingPage() {
               onResultChange={setHasResult}
             />
           )}
-          {/* {mode === 'location' && (
+          {mode === "location" && (
             <LocationSearch
               onBack={() => setMode(null)}
               onResultChange={setHasResult}
             />
-          )} */}
+          )}
         </ReceiptCard>
       </div>
     </div>
