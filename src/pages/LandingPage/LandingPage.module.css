@@ -92,3 +92,17 @@
   overflow: hidden;
   pointer-events: none;
 }
+
+.footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  font-family: "Inconsolata", monospace;
+  font-size: 11px;
+  color: rgba(255, 255, 255);
+  text-align: center;
+  padding: 10px 0 24px;
+  letter-spacing: 0.06em;
+  z-index: 10;
+}

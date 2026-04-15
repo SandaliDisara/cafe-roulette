@@ -46,6 +46,7 @@ export default function LandingPage() {
           )}
         </ReceiptCard>
       </div>
+      <footer className={styles.footer}>Project By IslandTree Creations</footer>
     </div>
   );
 }
